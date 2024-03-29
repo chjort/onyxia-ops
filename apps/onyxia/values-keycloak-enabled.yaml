@@ -64,3 +64,20 @@ onyxia:
         }
       }
     ]
+
+    # add configmap with zscaler certs as volume to api pod
+    extraVolumes:
+      - name: zscaler-certs
+        configMap:
+          name: zscaler-certs
+
+    # mount the zscaler certs volume to relevant locations in api container
+    extraVolumeMounts:
+      - name: zscaler-certs
+        mountPath: /usr/local/share/ca-certificates
+      - name: zscaler-certs
+        subPath: zscaler_root_ca.crt
+        mountPath: /etc/ssl/certs/zscaler_root_ca.crt
+      - name: zscaler-certs
+        subPath: zscaler_intermediate_root_ca.crt
+        mountPath: /etc/ssl/certs/zscaler_intermediate_root_ca.crt
