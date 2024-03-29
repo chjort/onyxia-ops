@@ -5,7 +5,7 @@
     <p align="center">
         <a href="https://argocd.localhost">ArgoCD - argocd.localhost</a>
         <br/>
-        <a href="https://datalab.$DOMAIN/">Onyxia - datalab.$DOMAIN</a>
+        <a href="https://datalab.localhost/">Onyxia - datalab.localhost</a>
         <br />
         <a href="https://auth.localhost/auth">Keycloak - argocd.localhost/auth</a>
         <br />

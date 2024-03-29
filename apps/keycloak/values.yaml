@@ -55,7 +55,7 @@ keycloak:
 
   extraEnvVars: 
     - name: ONYXIA_RESOURCES_ALLOWED_ORIGINS
-      value: "https://datalab.$DOMAIN, http://localhost, http://127.0.0.1"
+      value: "https://datalab.localhost, http://localhost, http://127.0.0.1"
 
   initContainers: |
     - name: realm-ext-provider

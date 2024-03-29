@@ -1,9 +1,11 @@
 onyxia:
   ingress:
     enabled: true
-    #ingressClassName: nginx
+    ingressClassName: "nginx"
+    annotations:
+      kubernetes.io/ingress.class: nginx
     hosts:
-      - host: datalab.$DOMAIN
+      - host: onyxia.localhost
   web:
     # The full list of configuration option for the web component is available here: 
     # https://github.com/InseeFrLab/onyxia/blob/main/web/.env
